@@ -20,7 +20,7 @@ const Games = () => {
       emoji: '🎈',
       description: 'Catch falling numbers!',
       color: 'from-blue-400 to-cyan-400',
-      comingSoon: true
+      comingSoon: false
     },
     {
       id: 'treasure',
@@ -28,7 +28,7 @@ const Games = () => {
       emoji: '💎',
       description: 'Find treasures with math!',
       color: 'from-yellow-400 to-orange-400',
-      comingSoon: true
+      comingSoon: false
     },
     {
       id: 'race',
@@ -36,7 +36,7 @@ const Games = () => {
       emoji: '🏃',
       description: 'Race against time!',
       color: 'from-green-400 to-blue-400',
-      comingSoon: true
+      comingSoon: false
     }
   ];
 

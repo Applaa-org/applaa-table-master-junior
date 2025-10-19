@@ -17,6 +17,10 @@ import Practice from "./pages/Practice";
 import Games from "./pages/Games";
 import Progress from "./pages/Progress";
 import NotFound from "./pages/NotFound";
+import MatchingGame from "./pages/games/MatchingGame";
+import CatchTheNumber from "./pages/games/CatchTheNumber";
+import TreasureHunt from "./pages/games/TreasureHunt";
+import MathRace from "./pages/games/MathRace";
 import { Footer } from "@/components/Footer";
 
 const queryClient = new QueryClient();
@@ -62,6 +66,30 @@ const gamesRoute = createTanStackRoute({
   component: Games,
 })
 
+const matchingGameRoute = createTanStackRoute({
+  getParentRoute: () => rootRoute,
+  path: '/games/matching',
+  component: MatchingGame,
+})
+
+const catchTheNumberRoute = createTanStackRoute({
+  getParentRoute: () => rootRoute,
+  path: '/games/catch',
+  component: CatchTheNumber,
+})
+
+const treasureHuntRoute = createTanStackRoute({
+  getParentRoute: () => rootRoute,
+  path: '/games/treasure',
+  component: TreasureHunt,
+})
+
+const mathRaceRoute = createTanStackRoute({
+  getParentRoute: () => rootRoute,
+  path: '/games/race',
+  component: MathRace,
+})
+
 const progressRoute = createTanStackRoute({
   getParentRoute: () => rootRoute,
   path: '/progress',
@@ -80,6 +108,10 @@ const routeTree = rootRoute.addChildren([
   tablesRoute,
   practiceRoute,
   gamesRoute,
+  matchingGameRoute,
+  catchTheNumberRoute,
+  treasureHuntRoute,
+  mathRaceRoute,
   progressRoute,
   notFoundRoute
 ])
